@@ -12,9 +12,26 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setupUI()
     }
-
-
+    
+    private func setupUI() {
+        setupNavBar()
+        setupToggle()
+        view.backgroundColor = .white
+    }
+    
+    private func setupNavBar() {
+        navigationController?.navigationBar.barTintColor = .strongBlue
+        navigationController?.navigationBar.isTranslucent = false
+        title = "Member Selection"
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
+    
+    private func setupToggle() {
+        let xStart = (view.frame.width * 0.7) / 4
+        let toggleView = ToggleView(frame: CGRect(x: xStart, y: 40, width: view.frame.width * 0.7, height: 40))
+        view.addSubview(toggleView)
+    }
 }
 

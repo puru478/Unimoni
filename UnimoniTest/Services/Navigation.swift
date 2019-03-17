@@ -19,6 +19,7 @@ final class Navigation {
     init(window: UIWindow) {
         self.window = window
         navigationController = UINavigationController()
+        start()
         window.rootViewController = self.navigationController
         window.makeKeyAndVisible()
         setupActivityIndicator()
@@ -26,5 +27,10 @@ final class Navigation {
     
     private func setupActivityIndicator() {
         activityIndicatorView.stopAnimating()
+    }
+    
+    private func start() {
+        let mainVC = ViewController()
+        navigationController = UINavigationController(rootViewController: mainVC)
     }
 }
