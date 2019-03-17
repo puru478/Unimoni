@@ -18,6 +18,10 @@
 		4027AC15223EBD4A0079C88E /* Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AC14223EBD4A0079C88E /* Toggle.swift */; };
 		4027AC18223EBEF20079C88E /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AC17223EBEF20079C88E /* ToggleView.swift */; };
 		4027AC1A223EC49B0079C88E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AC19223EC49B0079C88E /* BaseView.swift */; };
+		4027AC1E223ECB630079C88E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AC1D223ECB630079C88E /* API.swift */; };
+		4027AC20223ECB720079C88E /* APIUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AC1F223ECB720079C88E /* APIUrls.swift */; };
+		4027AC23223ECF7A0079C88E /* APIResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AC22223ECF7A0079C88E /* APIResponseModel.swift */; };
+		4027AC25223ED11E0079C88E /* APICalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AC24223ED11D0079C88E /* APICalls.swift */; };
 		4055E113223E0D030062DE62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4055E112223E0D030062DE62 /* AppDelegate.swift */; };
 		4055E115223E0D030062DE62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4055E114223E0D030062DE62 /* ViewController.swift */; };
 		4055E118223E0D030062DE62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4055E116223E0D030062DE62 /* Main.storyboard */; };
@@ -37,6 +41,10 @@
 		4027AC14223EBD4A0079C88E /* Toggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toggle.swift; sourceTree = "<group>"; };
 		4027AC17223EBEF20079C88E /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
 		4027AC19223EC49B0079C88E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		4027AC1D223ECB630079C88E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		4027AC1F223ECB720079C88E /* APIUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUrls.swift; sourceTree = "<group>"; };
+		4027AC22223ECF7A0079C88E /* APIResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseModel.swift; sourceTree = "<group>"; };
+		4027AC24223ED11D0079C88E /* APICalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICalls.swift; sourceTree = "<group>"; };
 		4055E10F223E0D030062DE62 /* UnimoniTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnimoniTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4055E112223E0D030062DE62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4055E114223E0D030062DE62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +68,7 @@
 		4027ABFD223EB31F0079C88E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4027AC1C223ECB540079C88E /* Network Layer */,
 				4027ABFE223EB3350079C88E /* Navigation.swift */,
 			);
 			path = Services;
@@ -68,6 +77,7 @@
 		4027AC00223EB3850079C88E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				4027AC1B223ECA370079C88E /* TableViewCells */,
 				4027AC01223EB38A0079C88E /* Components */,
 			);
 			path = Screens;
@@ -127,6 +137,24 @@
 				4027AC17223EBEF20079C88E /* ToggleView.swift */,
 			);
 			path = "Toggle Component";
+			sourceTree = "<group>";
+		};
+		4027AC1B223ECA370079C88E /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		4027AC1C223ECB540079C88E /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				4027AC1D223ECB630079C88E /* API.swift */,
+				4027AC1F223ECB720079C88E /* APIUrls.swift */,
+				4027AC22223ECF7A0079C88E /* APIResponseModel.swift */,
+				4027AC24223ED11D0079C88E /* APICalls.swift */,
+			);
+			path = "Network Layer";
 			sourceTree = "<group>";
 		};
 		4055E106223E0D030062DE62 = {
@@ -235,13 +263,17 @@
 				4027AC0D223EB9720079C88E /* UIColourExtension.swift in Sources */,
 				4027AC1A223EC49B0079C88E /* BaseView.swift in Sources */,
 				4027AC07223EB8750079C88E /* TableViewProtocols.swift in Sources */,
+				4027AC25223ED11E0079C88E /* APICalls.swift in Sources */,
 				4027AC0F223EB9C70079C88E /* NSMutableAttributedStringExtension.swift in Sources */,
 				4027AC0A223EB8A10079C88E /* AppConstants.swift in Sources */,
 				4027AC18223EBEF20079C88E /* ToggleView.swift in Sources */,
+				4027AC1E223ECB630079C88E /* API.swift in Sources */,
 				4027AC03223EB39A0079C88E /* ActivityIndicator.swift in Sources */,
 				4027AC11223EBA2E0079C88E /* Helper.swift in Sources */,
 				4027ABFF223EB3350079C88E /* Navigation.swift in Sources */,
 				4055E115223E0D030062DE62 /* ViewController.swift in Sources */,
+				4027AC23223ECF7A0079C88E /* APIResponseModel.swift in Sources */,
+				4027AC20223ECB720079C88E /* APIUrls.swift in Sources */,
 				4027AC13223EBA510079C88E /* DynamicHandler.swift in Sources */,
 				4027AC15223EBD4A0079C88E /* Toggle.swift in Sources */,
 				4055E113223E0D030062DE62 /* AppDelegate.swift in Sources */,
