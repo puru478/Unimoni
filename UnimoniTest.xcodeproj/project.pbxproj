@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		4027ABFF223EB3350079C88E /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027ABFE223EB3350079C88E /* Navigation.swift */; };
 		4027AC03223EB39A0079C88E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AC02223EB39A0079C88E /* ActivityIndicator.swift */; };
+		4027AC07223EB8750079C88E /* TableViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AC06223EB8750079C88E /* TableViewProtocols.swift */; };
+		4027AC0A223EB8A10079C88E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AC09223EB8A10079C88E /* AppConstants.swift */; };
+		4027AC0D223EB9720079C88E /* UIColourExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AC0C223EB9720079C88E /* UIColourExtension.swift */; };
+		4027AC0F223EB9C70079C88E /* NSMutableAttributedStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AC0E223EB9C70079C88E /* NSMutableAttributedStringExtension.swift */; };
+		4027AC11223EBA2E0079C88E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AC10223EBA2E0079C88E /* Helper.swift */; };
+		4027AC13223EBA510079C88E /* DynamicHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027AC12223EBA510079C88E /* DynamicHandler.swift */; };
 		4055E113223E0D030062DE62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4055E112223E0D030062DE62 /* AppDelegate.swift */; };
 		4055E115223E0D030062DE62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4055E114223E0D030062DE62 /* ViewController.swift */; };
 		4055E118223E0D030062DE62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4055E116223E0D030062DE62 /* Main.storyboard */; };
@@ -19,6 +25,12 @@
 /* Begin PBXFileReference section */
 		4027ABFE223EB3350079C88E /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		4027AC02223EB39A0079C88E /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		4027AC06223EB8750079C88E /* TableViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewProtocols.swift; sourceTree = "<group>"; };
+		4027AC09223EB8A10079C88E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		4027AC0C223EB9720079C88E /* UIColourExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColourExtension.swift; sourceTree = "<group>"; };
+		4027AC0E223EB9C70079C88E /* NSMutableAttributedStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedStringExtension.swift; sourceTree = "<group>"; };
+		4027AC10223EBA2E0079C88E /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		4027AC12223EBA510079C88E /* DynamicHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHandler.swift; sourceTree = "<group>"; };
 		4055E10F223E0D030062DE62 /* UnimoniTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnimoniTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4055E112223E0D030062DE62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4055E114223E0D030062DE62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +75,43 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		4027AC04223EB8550079C88E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4027AC0B223EB9600079C88E /* Extensions */,
+				4027AC08223EB88A0079C88E /* Constants */,
+				4027AC05223EB85F0079C88E /* Protocols */,
+				4027AC10223EBA2E0079C88E /* Helper.swift */,
+				4027AC12223EBA510079C88E /* DynamicHandler.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4027AC05223EB85F0079C88E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4027AC06223EB8750079C88E /* TableViewProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		4027AC08223EB88A0079C88E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4027AC09223EB8A10079C88E /* AppConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		4027AC0B223EB9600079C88E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4027AC0C223EB9720079C88E /* UIColourExtension.swift */,
+				4027AC0E223EB9C70079C88E /* NSMutableAttributedStringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4055E106223E0D030062DE62 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +131,7 @@
 		4055E111223E0D030062DE62 /* UnimoniTest */ = {
 			isa = PBXGroup;
 			children = (
+				4027AC04223EB8550079C88E /* Utils */,
 				4027AC00223EB3850079C88E /* Screens */,
 				4027ABFD223EB31F0079C88E /* Services */,
 				4055E112223E0D030062DE62 /* AppDelegate.swift */,
@@ -165,9 +215,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4027AC0D223EB9720079C88E /* UIColourExtension.swift in Sources */,
+				4027AC07223EB8750079C88E /* TableViewProtocols.swift in Sources */,
+				4027AC0F223EB9C70079C88E /* NSMutableAttributedStringExtension.swift in Sources */,
+				4027AC0A223EB8A10079C88E /* AppConstants.swift in Sources */,
 				4027AC03223EB39A0079C88E /* ActivityIndicator.swift in Sources */,
+				4027AC11223EBA2E0079C88E /* Helper.swift in Sources */,
 				4027ABFF223EB3350079C88E /* Navigation.swift in Sources */,
 				4055E115223E0D030062DE62 /* ViewController.swift in Sources */,
+				4027AC13223EBA510079C88E /* DynamicHandler.swift in Sources */,
 				4055E113223E0D030062DE62 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
