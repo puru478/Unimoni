@@ -12,9 +12,11 @@ class ViewController: UIViewController {
 
     var tableView: UITableView!
     
+    let viewModel = MainViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        viewModel.callAPIfor(numberOfMembers: .memberCount2)
     }
     
     private func setupUI() {
@@ -22,6 +24,12 @@ class ViewController: UIViewController {
         setupToggle()
         setupTableView()
         view.backgroundColor = .white
+        viewModel.reloadTable = {
+            DispatchQueue.main.async {
+                Helper.hideActivityIndicator()
+                self.tableView.reloadData()
+            }
+        }
     }
     
     private func setupNavBar() {
@@ -33,24 +41,38 @@ class ViewController: UIViewController {
     
     private func setupToggle() {
         let xStart = (view.frame.width * 0.7) / 4
-        let toggleView = ToggleView(frame: CGRect(x: xStart, y: 40, width: view.frame.width * 0.7, height: 40))
+        let toggleView = ToggleView(frame: CGRect(x: xStart, y: 20, width: view.frame.width * 0.7, height: 40))
+        toggleView.isToggleSelected.bind { [weak self] (value) in
+            switch value {
+            case true:
+                self?.viewModel.callAPIfor(numberOfMembers: .memberCount2)
+            case false:
+                self?.viewModel.callAPIfor(numberOfMembers: .memberCount4)
+            }
+        }
         view.addSubview(toggleView)
     }
     
     private func setupTableView() {
-        tableView = UITableView(frame: CGRect(x: 10, y: 100, width: view.frame.width - 20, height: view.frame.height - 100))
+        tableView = UITableView(frame: CGRect(x: 0, y: 80, width: view.frame.width, height: view.frame.height - 140))
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.estimatedRowHeight = 250
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.separatorStyle = .none
+        tableView.bounces = false
         view.addSubview(tableView)
+        viewModel.tableItemTypes.forEach { (cell) in cell.registerCell(tableview: tableView)}
     }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModel.tableItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cellVM = viewModel.tableItems[indexPath.row]
+        return cellVM.cellInstanatiate(tableview: tableView, indexPath: indexPath)
     }
 }

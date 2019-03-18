@@ -49,4 +49,8 @@ extension UIColor {
     static var lightBlue: UIColor {
         return colorFromHexString("24a7e3")
     }
+    
+    static var whiteGrey: UIColor {
+        return colorFromHexString("F2F3F6")
+    }
 }
