@@ -23,13 +23,13 @@
                         <rect key="frame" x="10" y="10" width="300" height="563.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OO-XZ-u5G">
-                                <rect key="frame" x="8" y="8" width="42" height="21.5"/>
+                                <rect key="frame" x="8" y="8" width="42" height="16.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvS-y8-Ec5">
-                                <rect key="frame" x="250" y="8" width="42" height="21.5"/>
+                                <rect key="frame" x="250" y="8" width="42" height="16.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -90,7 +90,7 @@
                             <constraint firstAttribute="trailing" secondItem="cvS-y8-Ec5" secondAttribute="trailing" constant="8" id="duV-1r-Ts1"/>
                             <constraint firstAttribute="bottom" secondItem="SXJ-JP-LNq" secondAttribute="bottom" id="hKe-Gu-EHP"/>
                             <constraint firstItem="SXJ-JP-LNq" firstAttribute="top" secondItem="Kvr-Zd-Q5e" secondAttribute="bottom" constant="8" id="nLJ-dD-Ihu"/>
-                            <constraint firstItem="Kvr-Zd-Q5e" firstAttribute="top" secondItem="2OO-XZ-u5G" secondAttribute="bottom" constant="10" id="p3Q-8O-Guk"/>
+                            <constraint firstItem="Kvr-Zd-Q5e" firstAttribute="top" secondItem="2OO-XZ-u5G" secondAttribute="bottom" constant="15" id="p3Q-8O-Guk"/>
                             <constraint firstItem="cvS-y8-Ec5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2OO-XZ-u5G" secondAttribute="trailing" constant="8" id="uCo-Kr-3s8"/>
                         </constraints>
                     </view>

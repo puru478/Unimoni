@@ -61,6 +61,7 @@ class ViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
         tableView.bounces = false
+        tableView.showsVerticalScrollIndicator = false
         view.addSubview(tableView)
         viewModel.tableItemTypes.forEach { (cell) in cell.registerCell(tableview: tableView)}
     }

@@ -13,7 +13,7 @@ class PlanCellVM {
     let planCost: NSMutableAttributedString
     let planDetails: NSMutableAttributedString
     
-    var collectionItemTypes: [CollectionCellRepresentable.Type] = [BenefitCollectionCellVM.self]
+    var collectionItemTypes: [CollectionCellRepresentable.Type] = [BenefitCollectionCellVM.self, SaveCollectionCellVM.self]
     var collectionItems = [CollectionCellRepresentable]()
     
     var reloadCollection: (() -> ())?
@@ -30,6 +30,7 @@ class PlanCellVM {
         for i in 0..<benefits.count {
             viewModel.append(BenefitCollectionCellVM(benefitModel: benefits[i], count: i + 1))
         }
+        viewModel.append(SaveCollectionCellVM())
         collectionItems = viewModel
         reloadCollection?()
     }

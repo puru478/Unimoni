@@ -62,6 +62,6 @@ extension PlanTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width * 0.5, height: collectionView.bounds.height * 0.31)
+        return CGSize(width: collectionView.bounds.width * 0.45, height: collectionView.bounds.height * 0.31)
     }
 }
