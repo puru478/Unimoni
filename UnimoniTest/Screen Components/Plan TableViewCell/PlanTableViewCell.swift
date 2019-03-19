@@ -18,6 +18,7 @@ class PlanTableViewCell: UITableViewCell {
             planBenefitsCollectionView.dataSource = self
             planBenefitsCollectionView.backgroundColor = .whiteGrey
             planBenefitsCollectionView.bounces = false
+            planBenefitsCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
         }
     }
     @IBOutlet weak var planDetailsLabel: UILabel!
@@ -62,6 +63,18 @@ extension PlanTableViewCell: UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width * 0.45, height: collectionView.bounds.height * 0.31)
+        if UIScreen.main.bounds.width == 320 {
+            return CGSize(width: collectionView.frame.size.width * 0.45, height: collectionView.frame.size.width * 0.5)
+        }
+        return CGSize(width: collectionView.frame.size.width/2, height: collectionView.frame.size.width * 0.5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if UIScreen.main.bounds.width == 320 {
+            return UIEdgeInsets(top: 5, left: 15, bottom: 5, right: 0)
+        } else if UIScreen.main.bounds.width < 400 {
+            return UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
+        }
+        return UIEdgeInsets(top: 10, left: 30, bottom: 0, right: 30)
     }
 }

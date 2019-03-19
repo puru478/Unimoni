@@ -20,13 +20,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1rc-ux-MYo">
-                        <rect key="frame" x="8" y="156.5" width="234" height="85.5"/>
+                        <rect key="frame" x="8" y="116" width="234" height="126"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zM8-Yf-0Bd">
-                        <rect key="frame" x="8" y="8" width="140.5" height="140.5"/>
+                        <rect key="frame" x="8" y="8" width="100" height="100"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="zM8-Yf-0Bd" secondAttribute="height" multiplier="1:1" id="xFT-kT-7tG"/>
                         </constraints>
@@ -37,8 +37,8 @@
                 <constraint firstAttribute="trailing" secondItem="1rc-ux-MYo" secondAttribute="trailing" constant="8" id="3PQ-gH-ke8"/>
                 <constraint firstAttribute="bottom" secondItem="1rc-ux-MYo" secondAttribute="bottom" constant="8" id="79X-6J-3wj"/>
                 <constraint firstItem="1rc-ux-MYo" firstAttribute="top" secondItem="zM8-Yf-0Bd" secondAttribute="bottom" constant="8" id="8mv-wW-UwC"/>
+                <constraint firstItem="zM8-Yf-0Bd" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.4" id="AQY-Zq-jl0"/>
                 <constraint firstItem="1rc-ux-MYo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="IOy-7U-Rli"/>
-                <constraint firstItem="zM8-Yf-0Bd" firstAttribute="width" secondItem="1rc-ux-MYo" secondAttribute="width" multiplier="0.6" id="QhI-Vq-ovJ"/>
                 <constraint firstItem="zM8-Yf-0Bd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="Un2-mS-lzN"/>
                 <constraint firstItem="zM8-Yf-0Bd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="fIs-G1-kGC"/>
             </constraints>
